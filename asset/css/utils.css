@@ -1,0 +1,85 @@
+/* a better, lightweight, css reset for modern web */
+body,
+address,
+article,
+aside,
+audio,
+blockquote,
+canvas,
+dd,
+div,
+dl,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+input,
+noscript,
+ol,
+output,
+p,
+pre,
+section,
+table,
+tfoot,
+ul,
+video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .flex is parent wrapper for all the flex-100,50,33,25 childs */
+.flex {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+}
+
+/* children of .flex */
+.flex-100 {
+  -webkit-flex: 3 1 100%;
+  flex: 3 1 100%;
+  -webkit-order: 1;
+  order: 1;
+}
+.flex-75 {
+  -webkit-flex: 2 1 75%;
+  flex: 2 1 75%;
+  -webkit-order: 2;
+  order: 2;
+}
+.flex-50 {
+  -webkit-flex: 2 1 50%;
+  flex: 2 1 50%;
+  -webkit-order: 2;
+  order: 2;
+}
+.flex-33 {
+  -webkit-flex: 2 1 33%;
+  flex: 2 1 33%;
+  -webkit-order: 2;
+  order: 2;
+}
+.flex-25 {
+  -webkit-flex: 2 1 25%;
+  flex: 2 1 25%;
+  -webkit-order: 1;
+  order: 1;
+}
+
+/* inside your mobile media query all you need is this to make all flex full width for hand-held devices */
+@media all and (max-width: 720px) {
+  .flex {
+    display: block;
+  }
+}
